@@ -1,0 +1,497 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{enumerate}% http://ctan.org/pkg/enumerate
+
+\usepackage{graphicx,url}
+
+\usepackage[brazil]{babel}   
+%\usepackage[latin1]{inputenc}  
+\usepackage[utf8]{inputenc}  
+% UTF-8 encoding is recommended by ShareLaTex
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{comment}
+\usepackage{multicol}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\renewcommand{\lstlistingname}{Código Fonte}% Listing -> Algorithm
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+%"mystyle" code listing set
+\lstset{style=mystyle}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Linguagens de Programação: \textit{Java}\\
+}
+
+\author{\IEEEauthorblockN{Patrick Araújo}
+\IEEEauthorblockA{\textit{Acadêmico do curso de Ciência da Computação} \\
+\textit{Universidade Federal do Tocantins}\\
+Palmas - TO, Brasil \\
+patrick.araujo@uft.edu.br}
+}
+
+\maketitle
+
+\begin{abstract}
+Diante da necessidade de elaborar um trabalho acadêmico para a disciplina de Linguagens de Computação, o presente artigo apresenta uma breve introdução sobre a linguagem de programação \textit{Java}, suas principais características, estrutura gramatical e uma lista de palavras chaves, operadores, conectivos e regras que se deve respeitar para a elaboração de um algoritmo bem documentado e com facilidade de leitura.
+
+
+\begin{comment}
+Diante da necessidade de elaborar um trabalho acadêmico para a disciplina de Linguagens de Computação, o presente artigo apresenta uma breve introdução sobre a linguagem de programação Java, suas principais características, estrutura gramatical e uma lista de palavras chaves, operadores, conectivos e regras que se deve respeitar para a elaboração de um algoritmo bem documentado e com facilidade de leitura.
+\end{comment}
+\end{abstract}
+
+\begin{IEEEkeywords}
+Linguagens de Programação, \textit{Java}, Gramática
+\end{IEEEkeywords}
+
+\section{Introdução}
+A linguagem \textit{Java} surgiu em 1995 e foi criada por James Gosling, que trabalhava na empresa \textit{Sun Microsystem}s, hoje \textit{Oracle}. Bastante usada no meio acadêmico para ensino de orientação a objetos, é umas das linguagens de programação mais populares atualmente. Umas das razões dessa popularidade se justifica pelo fato de ela ser multiplataforma, isso é possível porque o seu o código é compilado para \textit{bytecode} que, em seguida, é interpretado pela \textit{Java Virtual Machine}.
+
+Ela possui uma sintaxe muito parecida com \textit{C}, \textit{C++} e \textit{C\#}, mas com diferentes bibliotecas. Por ser multiplataforma os programas em Java podem ser executados em diversos sistemas operacionais, com a condição que o interpretador esteja na máquina.
+
+A Máquina Virtual \textit{Java} converte o código \textit{Java} em instruções que o sistema operacional reconheça. Por existir diversos computadores com variados sistemas operacionais, os programas \textit{Java} podem ser processados em qualquer lugar. O lado negativo é que o programa se torna mais lento do que em comparação com outras linguagens.
+
+Linguagens como \textit{C} ou \textit{C++} por outro lado, necessitam de um compilador para cada plataforma o que pode alterar também a escrita de programas. Para cada plataforma é necessário recompilar o código fonte, isso geral um arquivo binário diferente. Embora pode ser mais custoso esse processo, ele pode ser benéfico pois o desempenho aumenta.
+
+A \textit{JVM} permite que um único arquivo binário seja gerado para ser executado em diversas plataformas. 
+
+Desde a sua criação, \textit{Java} foi planejada em duas partes. Como inglês e português, \textit{Java} tem sua gramática e nomes comumente usados. A linguagem de programação \textit{Java} tem suas especificações (sua gramática) e sua interface de programação de aplicações. 
+
+A linguagem de especificação \textit{Java} é um documento que inclui regras como “Sempre abra parênteses depois da palavra \textit{for}” e “use asteriscos para multiplicar dois números”. A linguagem de especificação é relativamente pequena em comparação com outras linguagens.
+
+\begin{comment}
+A linguagem Java surgiu em 1995 e foi criada por James Gosling, que trabalhava na empresa Sun Microsystems, hoje Oracle. Bastante usada no meio acadêmico para ensino de orientação a objetos, é umas das linguagens de programação mais populares atualmente. Umas das razões dessa popularidade se justifica pelo fato de ela ser multiplataforma, isso é possível porque o seu o código é compilado para bytecode que, em seguida, é interpretado pela Java Virtual Machine.
+Ela possui uma sintaxe muito parecida com C, C++ e C#, mas com diferentes bibliotecas. Por ser multiplataforma os programas em Java podem ser executados em diversos sistemas operacionais, com a condição que o interpretador esteja na máquina.
+A Máquina Virtual Java converte o código Java em instruções que o sistema operacional reconheça. Por existir diversos computadores com variados sistemas operacionais, os programas Java podem ser processados em qualquer lugar. O lado negativo é que o programa se torna mais lento do que em comparação com outras linguagens.
+Linguagens como C ou C++ por outro lado, necessitam de um compilador para cada plataforma o que pode alterar também a escrita de programas. Para cada plataforma é necessário recompilar o código fonte, isso geral um arquivo binário diferente. Embora pode ser mais custoso esse processo, ele pode ser benéfico pois o desempenho aumenta.
+A JVM permite que um único arquivo binário seja gerado para ser executado em diversas plataformas. 
+Desde a sua criação, Java foi planejada em duas partes. Como inglês e português, Java tem sua gramática e nomes comumente usados. A linguagem de programação Java tem suas especificações (sua gramática) e sua interface de programação de aplicações. 
+A linguagem de especificação Java é um documento que inclui regras como “Sempre abra parênteses depois da palavra for” e “use asteriscos para multiplicar dois números”. A linguagem de especificação é relativamente pequena em comparação com outras linguagens.
+
+\end{comment}
+
+\section{Gramática}
+
+\subsection{Gramática Léxica}\label{AA}
+A gramática de \textit{Java} tem como seus símbolos terminais os caracteres da codificação de caracteres \textit{\textbf{Unicode}}. Ela define um conjunto de produções, começando do símbolo principal \textit{Input}, que descreve como sequencias de caracteres \textit{Unicode} são traduzidos em uma sequência de elementos \textit{input}.
+
+Esses elementos \textit{inputs} com espaço em branco e comentários descartados, formam os símbolos terminais da gramática sintática da linguagem de programação \textit{Java}, e são chamados de \textit{tokens}. Esses \textit{tokens} são identificadores, palavras chaves, literais, separadores e operadores da linguagem.
+
+\subsection{Gramática Sintática}\label{AA}
+A gramática sintática possui \textit{tokens} definidos pela gramática léxica como seus símbolos terminais. Ela define um conjunto de produções, começando com o símbolo principal \textit{CompilationUnit}, que descreve como a sequência de \textit{tokens} podem formar programas sintaticamente corretos.
+
+\begin{comment}
+Gramática Léxica
+
+A gramática de Java tem como seus símbolos terminais os caracteres da codificação de caracteres Unicode. Ela define um conjunto de produções, começando do símbolo principal Input, que descreve como sequencias de caracteres Unicode são traduzidos em uma sequência de elementos input.
+Esses elementos inputs com espaço em branco e comentários descartados, formam os símbolos terminais da gramática sintática da linguagem de programação Java, e são chamados de tokens. Esses tokens são identificadores, palavras chaves, literais, separadores e operadores da linguagem.
+Gramática Sintática
+
+A gramática sintática possui tokens definidos pela gramática léxica como seus símbolos terminais. Ela define um conjunto de produções, começando com o símbolo principal CompilationUnit, que descreve como a sequência de tokens podem formar programas sintaticamente corretos.
+
+\end{comment}
+
+\section{Palavras chaves}
+
+50 sequencias de caracteres, formados a partir de letras do \textit{ASCII}, são reservadas para uso de palavras chaves e não podem ser usadas como identificadores.
+
+
+
+\begin{multicols}{4}
+\textit{abstract}
+
+\textit{assert}
+
+\textit{boolean}
+
+\textit{break}
+
+\textit{byte}
+
+\textit{case}
+
+\textit{catch}
+
+\textit{char}
+
+\textit{class}
+
+\textit{const}
+
+\textit{continue}
+
+\textit{default}
+
+\textit{do}
+
+\textit{double}
+
+\textit{else}
+
+\textit{enum}
+
+\textit{extends}
+
+\textit{final}
+
+\textit{finally}
+
+\textit{float}
+
+\textit{for}
+
+\textit{goto}
+
+\textit{if}
+
+\textit{implements}
+
+\textit{import}
+
+\textit{instanceof}
+
+\textit{int}
+
+\textit{interface}
+
+\textit{long}
+
+\textit{native}
+
+\textit{new}
+
+\textit{package}
+
+\textit{private}
+
+\textit{protected}
+
+\textit{public}
+
+\textit{return}
+
+\textit{short}
+
+\textit{static}
+
+\textit{strictfp}
+
+\textit{super}
+
+\textit{switch}
+
+\textit{synchronized}
+
+\textit{this}
+
+\textit{throw}
+
+\textit{throws}
+
+\textit{transient}
+
+\textit{try}
+
+\textit{void}
+
+\textit{volatile}
+
+\textit{while}
+
+\end{multicols}
+
+\begin{comment}
+Palavras chaves
+50 sequencias de caracteres, formados a partir de letras do ASCII, são reservadas para uso de palavras chaves e não podem ser usadas como identificadores
+ 
+abstract
+assert
+boolean
+break
+byte
+case
+catch
+char
+class
+const
+continue
+default
+do
+double
+else
+enum
+extends
+final
+finally
+float
+for
+goto
+if
+implements
+import
+instanceof
+int
+interface
+long
+native
+new
+package
+private
+protected
+public
+return
+short
+static
+strictfp
+super
+switch
+synchronized
+this
+throw
+throws
+transient
+try
+void
+volatile
+while 
+
+\end{comment}
+
+\section{Operadores e Conectivos}
+
+37 \textit{tokens} são operadores, formados dos caracteres da tabela \textit{ASCII}
+\begin{multicols}{5}
+=
+
+==
+
++
+
++=
+
+$<$
+
+$<$=
+
+-
+
+-=
+
+$>$
+
+$>$=
+
+*
+
+*=
+
+!
+
+!=
+
+/
+
+/=
+
+\sim
+
+\mid\mid
+
+\mid
+
+\mid=
+
+:
+
+++
+
+\wedge
+
+\wedge=
+
+--
+
+\%
+
+\%=
+
+$<$$<$$
+
+$<$$<$=
+
+$>$$>$
+
+$>$$>$=
+
+$>$$>$$>$
+
+$<$$<$$<$
+
+\end{multicols}
+
+\begin{comment}
+Operadores e Conectivos
+37 tokens são operadores, formados dos caracteres da tabela ASCII
+ 
+=
+==
++
++=
+>
+<=
+-
+-=
+<
+>=
+*
+*=
+!
+!=
+/
+/=
+~
+||
+|
+|=
+:
+++
+^
+^=
+--
+%
+%=
+<<
+<<=
+>>
+
+>>=
+>>>
+>>>
+
+\end{comment}
+
+\section{Regras}
+Os algoritmos devem ser escritos priorizando a facilidade de leitura, entendimento, e a modificação por outras pessoas. As regras de estilo são importantes e muitos algoritmos são avaliados pelo estilo e sua exatidão. Abaixo será elencado algumas regras básicas de estilo de programação.
+
+\begin{enumerate}
+\item Regra principal
+\begin{enumerate}
+\item Um programa deve ser legível.
+\end{enumerate}
+\item Comentários
+\begin{enumerate}
+\item Toda classe (exceto para classes internas anônimas) deve conter uma \textit{Javadoc} comentado que especifica o propósito da classe de descrever a sua interface pública em termos gerais. Exceto por classes aninhadas, o comentário \textit{Javadoc} deve incluir um tag autor (\textit{@author}).
+\item Todo método deve incluir um \textit{Javadoc} que comenta a sua função, métodos privados não se aplicam. O comentário deve incluir uma declaração de todas as condições que devem ser mantidas quando o método é chamado, como restrições sobre os valores aceitáveis de seus parâmetros (Também chamado de “pré-condições" do método). O propósito de cada parâmetro deve ser claramente documentado. Se há algum valor retornado, seu significado deve ser documentado. Se um método pode invocar alguma exceção, é uma boa ideia também documentar isso. É encorajado usar as tags \textit{@param}, \textit{@return}, e \textit{@throws} para documentar.
+\item Toda variável que tem papel não trivial no programa deve ser comentada para explicar seu propósito. Isso inclui tanto variáveis locais e globais. Para variáveis que não são privadas globais, o comentário deve ser no formato \textit{Javadoc}.
+\item Comentários podem ser incluídos no corpo de um método quando é necessário explicar a lógica de um código. Códigos bem escritos em geral possuem poucos comentários.
+\item Comentários nunca devem ser usados para explicar a linguagem \textit{Java}. Um comentário como “declarar uma variável float com nome y” ou “incrementar uma variável com nome x” é inútil.
+\end{enumerate}
+\item Formatação
+\begin{enumerate}
+\item Use indentação para mostrar a estrutura do programa. O corpo de uma definição de classe ou de método deve ser indentado. Quando uma instrução é aninhada dentro de outra instrução, ela deve ser recuada em um nível adicional.
+\item A abertura de um colchete “\{“ pode estar no final de uma linha. O fechamento de um colchete “\}” deve estar em uma linha com nenhum outro caractere.
+\item Não coloque mais que uma declaração em uma linha.
+\item Evite longas linhas. Em geral, linhas não devem possuir mais que 80 caracteres. Declarações longas devem possuir mais de uma linha.
+\item Evite aninhamento muito profundo de declarações.
+\item Espaços e linhas em brancos, podem facilitar a leitura de um programa. É ideal deixar espaços entre operadores, como =, ==, != e outros. Linhas em branco podem ajudar a leitura no caso de definições de método.
+\end{enumerate}
+\item Nomeação
+\begin{enumerate}
+\item Use nomes significantes para variáveis, métodos e classes.
+\item Para variáveis, métodos e pacotes devem ser usados palavras com caixa baixa. Nomes de classes devem conter palavras com a primeira letra maiúscula. Se um nome contém mais que duas palavras, é ideal deixar as palavras extras com letra maíscula.
+\item Use “\textit{final static}” para declarar constantes nomeadas para representar dados constantes. Constantes geralmente tem nomes que estão de forma integral em caixa alta e com as palavras separadas com o traço inferior.
+\end{enumerate}
+\item Métodos
+\begin{enumerate}
+\item Métodos devem conter uma clara e única tarefa identificável.
+\item Uma definição de método individual não deve ser muito longa. Em geral uma função não deve ser maior que uma página impressa.
+\item Os métodos de instância podem acessar as variáveis de instâncias que representam o estado de um objeto, mas deve-se evitar usar variáveis de instâncias para passar informações de um método a outro, para tanto, deve-se usar parâmetros de variáveis de retorno.
+\end{enumerate}
+\item Classe
+\begin{enumerate}
+\item Uma classe deve representar um claro, único e identificável conceito
+\item Deve-se usar os modificadores \textit{public}, \textit{protected} e \textit{private} para controlar o acesso as variáveis
+\item Variáveis membros devem em geral, serem declaradas em privado. Métodos \textit{getters} e \textit{setters} podem ser providos para acessar e manipular as variáveis membros privadas.
+\end{enumerate}
+\end{enumerate}
+
+\begin{comment}
+Regras
+Os algoritmos devem ser escritos priorizando a facilidade de leitura, entendimento, e a modificação por outras pessoas. As regras de estilo são importantes e muitos algoritmos são avaliados pelo estilo e sua exatidão. Abaixo será elencado algumas regras básicas de estilo de programação.
+1.	Regra principal: Um programa deve ser legível.
+2.	Comentários
+a.	Toda classe (exceto para classes internas anônimas) deve conter uma Javadoc comentado que especifica o propósito da classe de descrever a sua interface pública em termos gerais. Exceto por classes aninhadas, o comentário Javadoc deve incluir um tag autor (@author).
+b.	Todo método deve incluir um Javadoc que comenta a sua função, métodos privados não se aplicam. O comentário deve incluir uma declaração de todas as condições que devem ser mantidas quando o método é chamado, como restrições sobre os valores aceitáveis de seus parâmetros (Também chamado de “pré-condições do método). O propósito de cada parâmetro deve ser claramente documentado. Se há algum valor retornado, seu significado deve ser documentado. Se um método pode invocar alguma exceção, é uma boa ideia também documentar isso. É encorajado usar as tags @param, @return, e @throws para documentar.
+c.	Toda variável que tem papel não trivial no programa deve ser comentada para explicar seu propósito. Isso inclui tanto variáveis locais e globais. Para variáveis que não são privadas globais, o comentário deve ser no formato Javadoc.
+d.	Comentários podem ser incluídos no corpo de um método quando é necessário explicar a lógica de um código. Códigos bem escritos em geral possuem poucos comentários.
+e.	Comentários nunca devem ser usados para explicar a linguagem Java. Um comentário como “declarar uma variável float com nome y” ou “incrementar uma variável com nome x” é inútil.
+3.	Formatação
+a.	Use indentação para mostrar a estrutura do programa. O corpo de uma definição de classe ou de método deve ser indentado. Quando uma instrução é aninhada dentro de outra instrução, ela deve ser recuada em um nível adicional.
+b.	A abertura de um colchete “{“ pode estar no final de uma linha. O fechamento de um colchete “}” deve estar em uma linha com nenhum outro caractere.
+c.	Não coloque mais que uma declaração em uma linha
+d.	Evite longas linhas. Em geral, linhas não devem possuir mais que 80 caracteres. Declarações longas devem possuir mais de uma linha.
+e.	Evite aninhamento muito profundo de declarações. 
+f.	Espaços e linhas em brancos, podem facilitar a leitura de um programa. É ideal deixar espaços entre operadores, como =, ==, != e outros. Linhas em branco podem ajudar a leitura no caso de definições de método.
+4.	Nomeação
+a.	Use nomes significantes para variáveis, métodos e classes
+b.	Para variáveis, métodos e pacotes devem ser usados palavras com caixa baixa. Nomes de classes devem conter palavras com a primeira letra maiúscula. Se um nome contém mais que duas palavras, é ideal deixar as palavras extras com letra maíscula.
+c.	Use “final static” para declarar constantes nomeadas para representar dados constantes. Constantes geralmente tem nomes que estão de forma integral em caixa alta e com as palavras separadas com o traço inferior.
+5.	Métodos
+a.	Métodos devem conter uma clara e única tarefa identificável.
+b.	Uma definição de método individual não deve ser muito longa. Em geral uma função não deve ser maior que uma página impressa.
+c.	Os métodos de instância podem acessar as variáveis de instâncias que representam o estado de um objeto, mas deve-se evitar usar variáveis de instâncias para passar informações de um método a outro, para tanto, deve-se usar parâmetros de variáveis de retorno.
+6.	Classe
+a.	Uma classe deve representar um claro, único e identificável conceito
+b.	Deve-se usar os modificadores, public, protected e private para controlar o acesso as variáveis
+c.	Variáveis membros devem em geral, serem declaradas em privado. Métodos getters and setters podem ser providos para acessar e manipular as variáveis membros privadas.
+
+
+\end{comment}
+
+
+\begin{comment}
+As particularidades de Java não ficam só no fato da linguagem ser portátil e de possuir uma máquina virtual. A gramática de Java a torna uma linguagem com características únicas em comparação com outras linguagens. Além de possuir palavras chaves que em outras linguagens como C estão em falta. Em comparação os operadores e conectivos notamos a falta de operadores para ponteiros pelo fato de Java não trabalhar com ponteiros. Por fim temos as regras que os programadores devem seguir para a criação de algoritmos bem documentados, livres de redundância e legíveis.
+
+\end{comment}
+
+\section*{Conclusão}
+
+As particularidades de \textit{Java} não ficam só no fato da linguagem ser portátil e de possuir uma máquina virtual. A gramática de Java a torna uma linguagem com características únicas em comparação com outras linguagens. Além de possuir palavras chaves que em outras linguagens como \textit{C} estão em falta. Em comparação os operadores e conectivos notamos a falta de operadores para ponteiros pelo fato de Java não trabalhar com ponteiros. Por fim temos as regras que os programadores devem seguir para a criação de algoritmos bem documentados, livres de redundância e legíveis.
+
+\begin{thebibliography}{00}
+\bibitem{b1} D. Eck, "Java Programming Style Rules", Math.hws.edu, 2018. [Online]. Available: http://math.hws.edu/eck/cs124/f11/style\_guide.html. [Accessed: 27- Aug- 2018].
+\bibitem{b2} "Linguagens de programação - Hardware.com.br", Hardware.com.br, 2007. [Online]. Available: https://www.hardware.com.br/artigos/linguagens/. [Accessed: 27- Aug- 2018].
+\bibitem{b3} Gosling, B. Joy, G. Steele, G. Bracha and A. Buckley, "The Java™ Language Specification: Java SE 7 Edition", Oracle, 2011. [Online]. Available: https://docs.oracle.com/javase/specs/jls/se7/jls7.pdf. [Accessed: 27- Aug- 2018].
+
+\end{thebibliography}
+
+\end{document}
